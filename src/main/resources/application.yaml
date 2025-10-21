@@ -1,0 +1,20 @@
+spring:
+
+  r2dbc:
+    url: r2dbc:postgresql://127.0.0.1:5433/tododb
+    username: noleg
+    password: root
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
